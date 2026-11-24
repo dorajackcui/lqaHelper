@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "issues"],
+  "properties": {
+    "summary": {"type": "string"},
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["category", "severity", "description", "sourceText", "suggestion", "reference", "referenceKeys"],
+        "properties": {
+          "category": {"type": "string", "enum": ["Untranslated", "Truncation", "Overflow", "Encoding/Font", "Terminology", "Fluency", "Placeholder", "Reference Mismatch", "Other"]},
+          "severity": {"type": "string", "enum": ["critical", "major", "minor"]},
+          "description": {"type": "string"},
+          "sourceText": {"type": "string"},
+          "suggestion": {"type": "string"},
+          "reference": {"type": "string"},
+          "referenceKeys": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

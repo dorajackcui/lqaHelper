@@ -1,0 +1,75 @@
+# A project archive or export may be saved anywhere beside Start.cmd.
+# Only the distribution sources and repository metadata belong at the root.
+/*
+!/.gitignore
+!/.gitattributes
+!/.github/
+!/LICENSE*
+!/README.md
+!/Start.cmd
+!/setup-sharex.ps1
+!/app.py
+!/lqa/
+!/resources/
+!/frontend/
+!/web/
+!/tests/
+!/scripts/
+!/docs/
+!/vendor/
+
+# Python and ShareX are provisioned separately from a source checkout.
+# In particular, the running ShareX copy writes its callback key and history.
+/vendor/*
+!/vendor/excel/
+!/vendor/formdata/
+!/vendor/imagesize/
+
+# Local state, including archives placed inside a source directory.
+.lqa/
+.runtime/
+.codex/
+.ssh/
+.aws/
+captures/
+references/
+inbox/
+node_modules/
+__pycache__/
+.venv/
+.pytest_cache/
+.env
+.env.*
+.npmrc
+*.py[cod]
+*.log
+*.jsonl
+*.sqlite*
+*.db
+*.db-wal
+*.db-shm
+*.pem
+*.key
+*.pfx
+*.p12
+*.ppk
+library.json
+capture.json
+UploadersConfig.json
+ApplicationConfig.json
+HotkeysConfig.json
+
+# Exports, evidence and workbooks are local by default.
+*.zip
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.xlsm
+*.png
+*.jpg
+*.jpeg
+*.webp
+!/tests/fixtures/capture.jpg
+!/tests/fixtures/glossary.xls
+!/tests/fixtures/glossary.xlsx
